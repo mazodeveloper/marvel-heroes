@@ -7,6 +7,7 @@
 Simple application made using Marvel API, for explain the use of Clean Architecture in Swift.
 
 ## Architecture
+the architecture used for this project was `clean architecture`
 
 ![Architecture Diagram](https://user-images.githubusercontent.com/32545306/113739799-c0a9a880-96c5-11eb-8a4c-fe0e0b327aea.jpeg)
 
