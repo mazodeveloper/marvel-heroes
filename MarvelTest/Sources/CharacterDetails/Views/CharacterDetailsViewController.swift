@@ -13,6 +13,9 @@ final class CharacterDetailsViewController: UIViewController {
     @IBOutlet private weak var characterImage: UIImageView!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var characterStackView: UIStackView!
+    private let padding: CGFloat = 16
+    
     var character: CharacterViewModel?
     static let identifier = "CharacterDetailsViewController"
     private lazy var presenter: CharacterDetailsContract.Presenter = {
@@ -36,6 +39,11 @@ final class CharacterDetailsViewController: UIViewController {
     private func setupUI() {
         characterImage.alpha = 0
         activityIndicator.startAnimating()
+        characterStackView.layoutMargins = UIEdgeInsets(top: 0,
+                                                        left: padding,
+                                                        bottom: padding,
+                                                        right: padding)
+        characterStackView.isLayoutMarginsRelativeArrangement = true
     }
 
     static func getViewController() -> CharacterDetailsViewController {

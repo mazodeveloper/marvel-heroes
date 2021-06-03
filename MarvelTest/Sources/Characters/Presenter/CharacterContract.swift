@@ -20,7 +20,7 @@ protocol CharacterPresenterContract {
     func getMoreCharacters(row: Int)
 }
 
-protocol CharacterViewContract: class {
+protocol CharacterViewContract: AnyObject {
     func render(state: CharacterViewState)
 }
 
